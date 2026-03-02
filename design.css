@@ -1,0 +1,420 @@
+html, body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 250vh; 
+    background-color: #1a1a2e; 
+    background-image: url('fan.png'); 
+    background-size: 100% auto; 
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('rockyhill.png'); 
+    }
+}
+
+.content-wrapper {
+    padding: 60px 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.top-section {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.profilePhoto {
+    width: 250px; /* Sesuaikan ukuran dengan asset frame kamu */
+    height: 300px; /* Sesuaikan ukuran dengan asset frame kamu */
+    
+    /* 1. Atur Background Frame */
+    background-color: transparent; /* Hapus warna abu-abu sebelumnya */
+    background-image: url('rockyhill.png'); /* Panggil gambar frame dari Figma */
+    background-size: 100% 100%; /* Paksa frame memenuhi kotak */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 2. Atur Posisi Foto di Dalamnya agar di Tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 3. Atur Padding agar Foto Pas di "Bolongan" Frame */
+    /* Putar angkanya sampai fotomu pas di tengah frame */
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.profilePhoto img {
+    /* Pastikan foto aslimu mengikuti ukuran padding */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar foto tidak gepeng di dalam bolongan */
+    
+    /* Jika frame kamu bulat, tambahkan ini agar foto aslimu ikut bulat */
+    /* border-radius: 50%; */
+}
+
+.short-bio {
+    font-size: 14px;
+    color: #555555;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.About {
+    flex: 1;
+    padding: 20px 100px 20px 20px; 
+    box-sizing: border-box;
+    color: white; 
+    background-color: transparent;
+    background-image: url('rockyhill.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.skill-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.skill-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-icons img:hover {
+    transform: scale(1.2);
+}
+
+.eduExp {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d9d9d9;
+    background-image: url('rockyh.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.education, .experience {
+    flex: 1;
+}
+.edu-item {
+    margin-bottom: 20px;
+}
+.edu-item p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+.edu-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.edu-header .short-bio {
+    margin: 0;
+}
+.location-grey {
+    color: grey;
+    font-weight: normal;
+}
+.experience {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+}
+.experience h2 {
+    padding-left: 40px;
+}
+.exp-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+.exp-list {
+    list-style-type: none;
+    padding-left: 40px;
+    margin: 0;
+}
+.exp-list li {
+    margin-bottom: 15px;
+}
+
+.project h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.project-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-card {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    overflow-wrap: break-word;
+}
+
+.project-cover {
+    height: 200px;
+    background-color: #c2f0c2; 
+    background-size: cover;
+    background-position: center;
+}
+
+.project-info {
+    padding: 30px;
+    background-color: #ff9999; 
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: black;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.otherWork, .finalProject {
+    background-color: #d9d9d9;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+
+.otherWork {
+    background-color: transparent;
+}
+
+.otherWork h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #ffb3b3;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    background-color: #eadddd;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item:hover .overlay {
+    opacity: 1;
+}
+
+.finalProject {
+    background-color: transparent;
+    color: white;
+}
+
+.finalProject h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.fp-content {
+    display: flex;
+    gap: 30px;
+    background-color: #d9d9d9;
+    padding: 30px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.fp-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fp-text h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+}
+
+.fp-text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.fp-image {
+    width: 300px;
+    height: 200px;
+    background-color: #c2f0c2;
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.contactMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contactMe h2 {
+    color: white;
+    margin: 0 0 25px 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 160px; 
+    gap: 15px;
+    background-color: #d9d9d9;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.footer {
+    background-color: #1a1a4b; 
+    color: #d9d9d9;
+    padding: 15px 10%;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
